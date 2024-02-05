@@ -1,0 +1,115 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaApplication6.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApplication6.Views.SecondPage"
+             x:DataType="vm:MainViewModel"
+             Background="#2a2727">
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+    
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!-- Первая строка для первого изображения -->
+                <RowDefinition Height="160"/>
+                <!-- Вторая строка для второго изображения -->
+                <RowDefinition Height="20"/>
+                <!-- Третья строка для третьего изображения -->
+                <RowDefinition Height="100"/>
+                <!-- Четвёртая строка для четвёртого изображения -->
+                <RowDefinition Height="10"/>
+                <!-- Пятая строка для пятого изображения -->
+                <RowDefinition Height="160"/>
+                <!-- Шестая строка для шестого изображения -->
+                <RowDefinition Height="40"/>
+                <!-- Седьмая строка для седьмого изображения -->
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!-- Шапка -->
+            <Image Grid.Row="0" Source="/Assets/Header.png" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Uniform" Width="400" Height="150" Margin="0,0,0,0"/>
+            <Image Grid.Row="1" Source="/Assets/Мой профиль.png" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Uniform" Width="100" Height="50" Margin="0,0,0,0"/>
+            <!-- Шапка -->
+            
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+                <Image Source="/Assets/Property 1=Variant3.png" Stretch="Uniform" Width="150" Height="100"/>
+                <Button Width="140" Height="25" Margin="5,-100,0,0" Click="SaveSettingsButton_Click" CornerRadius="45"/>
+            </StackPanel>
+            <TextBlock Grid.Row="3" Text="                   Общие" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" FontFamily="SF Pro Display" LineHeight="45" FontWeight="Bold" FontSize="16" Foreground="White" Width="540" Height="280"/>
+            <Border Grid.Row="4" Background="#2a2727" BorderBrush="Red" BorderThickness="2" CornerRadius="45" Width="250" Height="100" Padding="20" HorizontalAlignment="Center">
+                <Grid>
+        
+                    <StackPanel Margin="10">
+                        <!-- <TextBlock Text="Enter Username:"/> -->
+                        <!-- <TextBox x:Name="UsernameTextBox" Margin="0,0,0,10"/> -->
+        
+                        <!-- <TextBlock Text="Enter Email:"/> -->
+                        <!-- <TextBox x:Name="EmailTextBox" Margin="0,0,0,10"/> -->
+                        <TextBlock Text="Язык интерфейса:         Русский" FontSize="12" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White" Padding="0,0,0,10"/>
+                        <!-- <CheckBox x:Name="NotificationsCheckBox" Content="Уведомления" Margin="0,0,0,10" FontSize="14" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White"/> -->
+                        <!-- <CheckBox x:Name="MailingCheckBox" Content="Enable Mailing" Margin="0,0,0,10"/> -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Уведомления" VerticalAlignment="Center" FontSize="12" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White"/>
+                            <CheckBox x:Name="NotificationsCheckBox" Margin="88,0,0,0" FontSize="12" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White"/>
+                        </StackPanel>
+        
+                        
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <TextBlock Grid.Row="5" Text="                   Почта и рассылка" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" FontFamily="SF Pro Display" LineHeight="45" FontWeight="Bold" FontSize="16" Foreground="White" Width="540" Height="280"/>
+            <Border Grid.Row="6" Background="#2a2727" BorderBrush="Red" BorderThickness="2" CornerRadius="45" Width="250" Height="100" Padding="20" HorizontalAlignment="Center">
+                <Grid>
+        
+                    <StackPanel Margin="10">
+                        <!-- <TextBlock Text="Enter Username:"/> -->
+                        <!-- <TextBox x:Name="UsernameTextBox" Margin="0,0,0,10"/> -->
+        
+                        <TextBlock Text="Почта:" FontSize="12" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White"/>
+                        <TextBox x:Name="EmailTextBox" Margin="80,-25,0,10"/>
+
+                        <!-- <CheckBox x:Name="NotificationsCheckBox" Content="Enable Notifications" Margin="0,0,0,10"/> -->
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Рассылка" VerticalAlignment="Center" FontSize="12" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White"/>
+                            <CheckBox x:Name="MailingCheckBox" Margin="108,0,0,0" FontSize="12" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White"/>
+                        </StackPanel>
+                        <!-- <CheckBox x:Name="MailingCheckBox" Content="Рассылка" Margin="0,0,0,10" FontSize="14" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White"/> -->
+        
+                        
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <!-- Шапка -->
+            
+        </Grid>
+        
+        <!-- Tool Bar -->
+        <Grid>
+            <Border BorderBrush="Red" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="305" Height="55" CornerRadius="45">
+                <DockPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                    <!-- Иконка 1 -->
+                    <Button DockPanel.Dock="Left" Click="OnGoToMainPageClick" Width="100" Height="50" Background="#2a2727" CornerRadius="45">
+                        <Image Source="/Assets/Home/Home_fill.png"/>
+                    </Button>
+        
+                    <!-- Иконка 2 -->
+                    <Button DockPanel.Dock="Left" Click="OnSearchButtonClick" Width="100" Height="50" Background="#2a2727" CornerRadius="45">
+                        <Image Source="/Assets/Search/Search_fill.png"/>
+                    </Button>
+        
+                    <!-- Иконка 3 -->
+                    <Button DockPanel.Dock="Left" Width="100" Height="50" Background="#2a2727" CornerRadius="45">
+                        <Image Source="/Assets/Account/User.png"/>
+                    </Button>
+                </DockPanel>
+            </Border>
+        </Grid>  
+        <!-- Tool Bar -->
+        
+    </Grid>
+</UserControl>

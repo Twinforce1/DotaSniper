@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApplication6", "AvaloniaApplication6\AvaloniaApplication6\AvaloniaApplication6.csproj", "{CBBE4820-6BD0-4845-A9CB-0F1EE7435BA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApplication6.Android", "AvaloniaApplication6\AvaloniaApplication6.Android\AvaloniaApplication6.Android.csproj", "{6BBA2DA2-5E45-4FC2-82DD-AB32AE795ADD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApplication6.Desktop", "AvaloniaApplication6\AvaloniaApplication6.Desktop\AvaloniaApplication6.Desktop.csproj", "{79D95932-63C6-4C53-B775-2BACF05A63DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApplication6.Browser", "AvaloniaApplication6\AvaloniaApplication6.Browser\AvaloniaApplication6.Browser.csproj", "{B9A68C4E-7E32-46F8-936C-E7D6C9C00D96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBBE4820-6BD0-4845-A9CB-0F1EE7435BA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBBE4820-6BD0-4845-A9CB-0F1EE7435BA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBBE4820-6BD0-4845-A9CB-0F1EE7435BA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBBE4820-6BD0-4845-A9CB-0F1EE7435BA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBA2DA2-5E45-4FC2-82DD-AB32AE795ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBA2DA2-5E45-4FC2-82DD-AB32AE795ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBA2DA2-5E45-4FC2-82DD-AB32AE795ADD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6BBA2DA2-5E45-4FC2-82DD-AB32AE795ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBA2DA2-5E45-4FC2-82DD-AB32AE795ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBA2DA2-5E45-4FC2-82DD-AB32AE795ADD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{79D95932-63C6-4C53-B775-2BACF05A63DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D95932-63C6-4C53-B775-2BACF05A63DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D95932-63C6-4C53-B775-2BACF05A63DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D95932-63C6-4C53-B775-2BACF05A63DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A68C4E-7E32-46F8-936C-E7D6C9C00D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A68C4E-7E32-46F8-936C-E7D6C9C00D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A68C4E-7E32-46F8-936C-E7D6C9C00D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A68C4E-7E32-46F8-936C-E7D6C9C00D96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

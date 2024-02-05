@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/App.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Browser/AvaloniaApplication6.Browser.csproj" />
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/Views/MainView.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Desktop/AvaloniaApplication6.Desktop.csproj" />
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/Views/MainView1.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Desktop/AvaloniaApplication6.Desktop.csproj" />
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/Views/MainWindow.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Browser/AvaloniaApplication6.Browser.csproj" />
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/Views/MainWindow1.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Browser/AvaloniaApplication6.Browser.csproj" />
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/Views/Matches.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Browser/AvaloniaApplication6.Browser.csproj" />
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/Views/PlayerPage.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Browser/AvaloniaApplication6.Browser.csproj" />
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/Views/SearchResult.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Desktop/AvaloniaApplication6.Desktop.csproj" />
+        <entry key="AvaloniaApplication6/AvaloniaApplication6/Views/SecondPage.axaml" value="AvaloniaApplication6/AvaloniaApplication6.Desktop/AvaloniaApplication6.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

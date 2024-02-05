@@ -1,0 +1,135 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaApplication6.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApplication6.Views.PlayerPage"
+             x:DataType="vm:MainViewModel"
+             Background="#2a2727">
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!-- Первая строка для первого изображения -->
+                <RowDefinition Height="160"/>
+                <!-- Вторая строка для второго изображения -->
+                <RowDefinition Height="50"/>
+                <!-- Третья строка для третьего изображения -->
+                <RowDefinition Height="50"/>
+                <!-- Четвёртая строка для четвёртого изображения -->
+                <RowDefinition Height="50"/>
+                <!-- Пятая строка для пятого изображения -->
+                <RowDefinition Height="60"/>
+                <!-- Шестая строка для шестого изображения -->
+                <RowDefinition Height="65"/>
+                <!-- Седьмая строка для седьмого изображения -->
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Шапка -->
+            <Image Grid.Row="0" Source="/Assets/Header.png" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Uniform" Width="400" Height="150"/>
+            <Image Grid.Row="1" Source="/Assets/Поиск игрока.png" HorizontalAlignment="Center" VerticalAlignment="Top" Stretch="Uniform" Width="100" Height="50"/>
+            <!-- Шапка -->
+        </Grid>
+        <!-- Профиль -->
+        <Border Background="#2a2727" BorderBrush="Red" BorderThickness="5" CornerRadius="45" Width="350" Height="150" Padding="30" Margin="0,0,0,100" HorizontalAlignment="Center">
+            <StackPanel Margin="10">
+                <TextBlock x:Name="PlayerNameTextBlock" FontSize="18" FontWeight="Bold" FontFamily="SF Pro Display" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,80,0"/>
+                <Image x:Name="AvatarImage" Width="100" Height="100" VerticalAlignment="Center" Margin="0,-35,190,0"/>
+                <Image x:Name="ImagePath" Width="70" Height="70" HorizontalAlignment="Center" Margin="0,-150,-250,0"/>
+                <TextBlock FontSize="16" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,60,0,0">
+                    <TextBlock x:Name="MatchesTextBlock" Foreground="Red" />
+                    <TextBlock Text="Матчей сыграно" Foreground="White" />
+                </TextBlock>
+                <TextBlock FontSize="16" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,30,0,0">
+                    <TextBlock x:Name="WinLossTextBlock" Foreground="Green" />
+                    <TextBlock Text="Винрейт" Foreground="White" />
+                </TextBlock>
+                
+
+                </StackPanel>
+        </Border>
+        <!-- Профиль -->
+        
+        <!-- Последний матч -->
+        <Border Background="#2a2727" BorderBrush="Red" BorderThickness="5" CornerRadius="45" Width="350" Height="150" Padding="30" Margin="0,600,0,0" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                
+        
+                <StackPanel Grid.Column="1" Margin="10">
+                    <TextBlock Text="Итог матча" FontSize="12" FontWeight="Bold" Foreground="White" Margin="100,0,0,0"/>
+                    <TextBlock x:Name="Resultmatch" FontSize="12" FontWeight="Bold" Foreground="White" Margin="200,-15,0,0" />
+                    <TextBlock Text="Убийств" FontSize="12" FontWeight="Bold" Foreground="White" Margin="100,0,0,0"/>
+                    <TextBlock x:Name="KillsTextBlock" FontSize="12" FontWeight="Bold" Foreground="White" Margin="200,-15,0,0" />
+                    <TextBlock Text="Смертей" FontSize="12" FontWeight="Bold" Foreground="White" Margin="100,0,0,0"/>
+                    <TextBlock x:Name="DeathsTextBlock" FontSize="12" FontWeight="Bold" Foreground="White" Margin="200,-15,0,0" />
+                    <TextBlock Text="Помощи" FontSize="12" FontWeight="Bold" Foreground="White" Margin="100,0,0,0"/>
+                    <TextBlock x:Name="AssistsTextBlock" FontSize="12" FontWeight="Bold" Foreground="White" Margin="200,-15,0,0" />
+                    <Image Source="/Assets/Line 4.png" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="110,-70,0,0" Grid.Column="0"/>
+                    <Image x:Name="HeroImage" Width="100" Height="100" Margin="-200,-80,0,0">
+                        <Image.Clip>
+                            <EllipseGeometry RadiusX="27" RadiusY="27" Center="58,27"/>
+                        </Image.Clip>
+                    </Image>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <!-- Последний матч -->
+        
+        <!-- ~1~ ToolBar @1@ -->
+        <!-- <Grid> -->
+        <!--     <Border BorderBrush="Red" BorderThickness="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="610" Height="110" CornerRadius="45"> -->
+        <!--         <DockPanel HorizontalAlignment="Center" VerticalAlignment="Bottom"> -->
+        <!--             ~1~ Иконка 1 @1@ -->
+        <!--             <Button DockPanel.Dock="Left" Click="OnGoToMainPageClick" Width="200" Height="100" Background="#2a2727" CornerRadius="45"> -->
+        <!--                 <Svg Path="Assets/Home/Home_fill.svg"/> -->
+        <!--             </Button> -->
+        <!-- -->
+        <!--             ~1~ Иконка 2 @1@ -->
+        <!--             <Button DockPanel.Dock="Left" Click="OnSearchButtonClick" Width="200" Height="100" Background="#2a2727" CornerRadius="45"> -->
+        <!--                 <Svg Path="Assets/Search/Search_fill.svg"/> -->
+        <!--             </Button> -->
+        <!-- -->
+        <!--             ~1~ Иконка 3 @1@ -->
+        <!--             <Button DockPanel.Dock="Left" Click="OnGoBackSecondButtonClick" Width="200" Height="100" Background="#2a2727" CornerRadius="45"> -->
+        <!--                 <Svg Path="Assets/Account/User.svg"/> -->
+        <!--             </Button> -->
+        <!--         </DockPanel> -->
+        <!--     </Border> -->
+        <!-- </Grid> -->
+        <!-- ~1~ ToolBar @1@ -->
+        <!-- ToolBar -->
+        <Grid>
+            <Border BorderBrush="Red" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="305" Height="55" CornerRadius="45">
+                <DockPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                    <!-- Иконка 1 -->
+                    <Button DockPanel.Dock="Left" Click="OnGoToMainPageClick" Width="100" Height="50" Background="#2a2727" CornerRadius="45">
+                        <Image Source="/Assets/Home/Home_fill.png"/>
+                    </Button>
+        
+                    <!-- Иконка 2 -->
+                    <Button DockPanel.Dock="Left" Click="OnSearchButtonClick" Width="100" Height="50" Background="#2a2727" CornerRadius="45">
+                        <Image Source="/Assets/Search/Search_fill.png"/>
+                    </Button>
+        
+                    <!-- Иконка 3 -->
+                    <Button DockPanel.Dock="Left" Click="OnGoBackSecondButtonClick" Width="100" Height="50" Background="#2a2727" CornerRadius="45">
+                        <Image Source="/Assets/Account/User.png"/>
+                    </Button>
+                </DockPanel>
+            </Border>
+        </Grid>
+        <!-- ToolBar -->
+        
+    </Grid>
+</UserControl>
